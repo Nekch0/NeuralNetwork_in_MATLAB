@@ -38,22 +38,6 @@ fprintf("Preparation Finished. (Train:%d, Test:%d)\n", length(train_images), len
 %% Learning
 addpath('./Layers');
 
-%layers = {
-    %imageInput({16, 16, 1});
-    %Conv2D(32, {3, 3}, 1, 'VALID', 'None');
-    %BatchNorm2D(0.99);
-    %Activation('ReLU');
-	%Pool('max', {2, 2}, 2);
-    %Conv2D(64, {3, 3}, 1, 'VALID', 'None');
-    %BatchNorm2D(0.99);
-    %Activation('ReLU');
-    %Pool('max', {2, 2}, 2);
-    %Flatten();
-    %Dense(256, 'ReLU');
-    %Dense(128, 'ReLU');
-    %Dense(10, 'SoftMax')
-%};
-
 layers = {
     imageInput({16, 16, 1});
     Flatten();
